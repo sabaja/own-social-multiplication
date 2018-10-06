@@ -1,1 +1,1 @@
-# own-social-multiplication\nbo
+# own-social-multiplication
