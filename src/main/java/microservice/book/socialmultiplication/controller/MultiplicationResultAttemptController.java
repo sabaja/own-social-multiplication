@@ -1,8 +1,6 @@
 package microservice.book.socialmultiplication.controller;
 
 import java.lang.invoke.MethodHandles;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

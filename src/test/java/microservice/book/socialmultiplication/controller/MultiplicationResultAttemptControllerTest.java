@@ -1,7 +1,6 @@
 package microservice.book.socialmultiplication.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -65,7 +64,7 @@ public class MultiplicationResultAttemptControllerTest {
 		  User user = new User("john");
 	        Multiplication multiplication = new Multiplication(50, 70);
 	        MultiplicationResultAttempt attempt = null;
-	        attempt = correct ?  new MultiplicationResultAttempt(multiplication, user, 3500) : new MultiplicationResultAttempt(multiplication, user, 350); 
+	        attempt = correct ?  new MultiplicationResultAttempt(multiplication, user, 3500, true) : new MultiplicationResultAttempt(multiplication, user, 350, false); 
 	        
 
 	        // when
