@@ -6,13 +6,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import microservice.book.socialmultiplication.domain.Multiplication;
 import microservice.book.socialmultiplication.domain.MultiplicationResultAttempt;
 
 @Service
 public class MultiplicationServiceImpl implements MultiplicationService {
-	
 
 	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 	private RandomGeneratorService randomGeneratorService;
@@ -33,18 +33,16 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 	}
 
 	@Override
-	public boolean checkAttempt(final MultiplicationResultAttempt multiplicationResultAttempt) {
+	public boolean checkAttempt(final MultiplicationResultAttempt attempt) {
+
+		boolean correct = attempt.getResultAttempt() == (attempt.getMultiplication().getFactorA())
+				* (attempt.getMultiplication().getFactorB());
 		
-		logger.debug("fattore a: {}", multiplicationResultAttempt.getMultiplication().getFactorA());
-		logger.info("fattore b: {}", multiplicationResultAttempt.getMultiplication().getFactorB());
-		logger.info("moltiplicazione: {}", (multiplicationResultAttempt.getMultiplication().getFactorA())
-				* (multiplicationResultAttempt.getMultiplication().getFactorB()));
-		logger.info("oggetto multiplicationResultAttempt result: {}",multiplicationResultAttempt
-				.getResultAttempt());
-		boolean check = multiplicationResultAttempt
-		.getResultAttempt() == (multiplicationResultAttempt.getMultiplication().getFactorA())
-				* (multiplicationResultAttempt.getMultiplication().getFactorB());
-		logger.info("E' giusta la moltiplicazione? {}", check);
-		return check;
+		// Avoids 'hack' attempts
+        Assert.isTrue(!attempt.isCorrect(), "You can't send an attempt marked as correct!!");
+
+        MultiplicationResultAttempt checkedResult = new MultiplicationResultAttempt(attempt.getMultiplication(), attempt.getUser(), attempt.getResultAttempt(), correct);
+		logger.info("E' giusta la moltiplicazione? {}", correct);
+		return correct;
 	}
 }
