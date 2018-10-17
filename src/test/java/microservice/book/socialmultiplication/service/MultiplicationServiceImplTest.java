@@ -12,7 +12,7 @@ import microservice.book.socialmultiplication.domain.Multiplication;
 import microservice.book.socialmultiplication.domain.MultiplicationResultAttempt;
 import microservice.book.socialmultiplication.domain.User;
 
-public class MultiplicationServiceTestImpl {
+public class MultiplicationServiceImplTest {
 
 	private MultiplicationServiceImpl multiplicationServiceImpl;
 

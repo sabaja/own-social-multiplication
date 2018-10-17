@@ -35,7 +35,7 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 	@Override
 	public boolean checkAttempt(final MultiplicationResultAttempt multiplicationResultAttempt) {
 		
-		logger.info("fattore a: {}", multiplicationResultAttempt.getMultiplication().getFactorA());
+		logger.debug("fattore a: {}", multiplicationResultAttempt.getMultiplication().getFactorA());
 		logger.info("fattore b: {}", multiplicationResultAttempt.getMultiplication().getFactorB());
 		logger.info("moltiplicazione: {}", (multiplicationResultAttempt.getMultiplication().getFactorA())
 				* (multiplicationResultAttempt.getMultiplication().getFactorB()));
