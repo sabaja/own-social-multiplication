@@ -16,9 +16,13 @@ public class MultiplicationResultAttempt {
 	private final Multiplication multiplication;
 	private final User user;
 	private final int resultAttempt;
-	
-	
+	private final boolean correct;
+
 	public MultiplicationResultAttempt() {
-		this(null, null, -1);
+		this.multiplication = null;
+		this.user = null;
+		this.resultAttempt = -1;
+		this.correct = false;
 	}
+
 }

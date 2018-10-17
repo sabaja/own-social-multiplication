@@ -1,0 +1,20 @@
+/*
+ * Sicuramente non è il CSS più bello del mondo: 
+ * ci stiamo solo assicurando che i contenuti siano mostrati al centro 
+ * della pagina, per evitare la sensazione di vuoto e per focalizzare 
+ * l'attenzione anche sui grandi schermi. 
+ * Lo miglioreremo nei prossimi capitoli.
+ * */
+html, body {
+	height: 100%;
+}
+
+html {
+	display: table;
+	margin: auto;
+}
+
+body {
+	display: table-cell;
+	vertical-align: middle;
+}

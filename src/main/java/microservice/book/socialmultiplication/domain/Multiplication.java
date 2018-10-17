@@ -19,9 +19,11 @@ public class Multiplication {
 
 	public Multiplication() {
 		this(0, 0);
+		this.result = 0;
 	}
 
 	public int getResult() {
-		return factorA * factorB;
+		this.result = this.factorA * this.factorB;
+		return result;
 	}
 }

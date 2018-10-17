@@ -9,10 +9,9 @@ import microservice.book.socialmultiplication.domain.Multiplication;
 import microservice.book.socialmultiplication.service.MultiplicationService;
 
 @RestController
-@RequestMapping("/multiplications")
+@RequestMapping(value="/multiplications")
 public class MultiplicationController {
 	
-	@SuppressWarnings("unused")
 	private MultiplicationService service;
 
 	@Autowired
