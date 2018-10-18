@@ -52,14 +52,14 @@ public class MultiplicationResultAttemptController {
 	}
 
 	@PostMapping
-	public ResponseEntity<ResultResponse> postAttempt(
+	public ResponseEntity<MultiplicationResultAttempt> postAttempt(
 			@RequestBody MultiplicationResultAttempt multiplicationResultAttempt) {
-		logger.info("Input from user (gui): ", multiplicationResultAttempt);
-		boolean check = multiplicationService.checkAttempt(multiplicationResultAttempt);
-		logger.info("E' corretto: {}", check);
-		int result = multiplicationResultAttempt.getMultiplication().getResult();
-		ResultResponse resultResponse = new ResultResponse(check,result);
-		logger.info("Boolean parsato all'oggetto: {}}", resultResponse.toString());
-		return ResponseEntity.ok(resultResponse);
+		boolean isCorrect = multiplicationService.checkAttempt(multiplicationResultAttempt);
+		logger.info("E' corretto: {}", isCorrect);
+		MultiplicationResultAttempt attemptCopy = new MultiplicationResultAttempt(
+				multiplicationResultAttempt.getMultiplication(), multiplicationResultAttempt.getUser(),
+				multiplicationResultAttempt.getResultAttempt(), isCorrect);
+		logger.info("Boolean parsato all'oggetto: {}}", attemptCopy.toString());
+		return ResponseEntity.ok(attemptCopy);
 	}
 }
