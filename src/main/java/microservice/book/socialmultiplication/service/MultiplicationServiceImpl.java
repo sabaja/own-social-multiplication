@@ -39,7 +39,7 @@ public class MultiplicationServiceImpl implements MultiplicationService {
 				* (attempt.getMultiplication().getFactorB());
 		
 		// Avoids 'hack' attempts
-        Assert.isTrue(!attempt.isCorrect(), "You can't send an attempt marked as correct!!");
+//        Assert.isTrue(!attempt.isCorrect(), "You can't send an attempt marked as correct!!");
 
         MultiplicationResultAttempt checkedResult = new MultiplicationResultAttempt(attempt.getMultiplication(), attempt.getUser(), attempt.getResultAttempt(), correct);
 		logger.info("E' giusta la moltiplicazione? {}", checkedResult.toString());
