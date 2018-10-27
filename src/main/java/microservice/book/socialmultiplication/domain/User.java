@@ -3,8 +3,10 @@ package microservice.book.socialmultiplication.domain;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -17,6 +19,8 @@ import lombok.ToString;
 @Setter
 @EqualsAndHashCode
 @ToString
+@Entity
+@Table(name="USER")
 public class User implements Serializable{
 
 	/**

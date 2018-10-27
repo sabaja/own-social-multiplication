@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -19,6 +20,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 @RequiredArgsConstructor
 @Entity
+@Table(name="MULTIPLICATION")
 public final class Multiplication implements Serializable {
 
 	/**
