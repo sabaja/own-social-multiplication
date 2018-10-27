@@ -2,10 +2,12 @@ package microservice.book.socialmultiplication.domain;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -18,6 +20,8 @@ import lombok.ToString;
 @Setter
 @ToString
 @EqualsAndHashCode
+@Entity
+@Table(name="MULTIPLICATION_RESULT_ATTEMPT")
 public class MultiplicationResultAttempt {
 
 	@Id
