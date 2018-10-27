@@ -32,8 +32,10 @@ public class MultiplicationResultAttempt {
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "USER_ID")
 	private final User user;
+	
 	@Column(name = "RESULT_ATTEMPT")
 	private final int resultAttempt;
+	
 	@Column(name = "IS_CORRECT")
 	private final boolean correct;
 
