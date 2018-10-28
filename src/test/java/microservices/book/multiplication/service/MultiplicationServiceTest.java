@@ -8,8 +8,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import microservices.book.multiplication.domain.Multiplication;
-import microservices.book.multiplication.service.MultiplicationService;
-import microservices.book.multiplication.service.RandomGeneratorService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
