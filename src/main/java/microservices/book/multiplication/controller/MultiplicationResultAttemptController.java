@@ -57,7 +57,7 @@ public class MultiplicationResultAttemptController {
 		boolean isCorrect = multiplicationService.checkAttempt(multiplicationResultAttempt);
 		logger.info("E' corretto: {}", isCorrect);
 		MultiplicationResultAttempt attemptCopy = new MultiplicationResultAttempt(
-				multiplicationResultAttempt.getMultiplication(), multiplicationResultAttempt.getUser(),
+				 multiplicationResultAttempt.getUser(),multiplicationResultAttempt.getMultiplication(),
 				multiplicationResultAttempt.getResultAttempt(), isCorrect);
 		logger.info("Boolean parsato all'oggetto: {}}", attemptCopy.toString());
 		return ResponseEntity.ok(attemptCopy);

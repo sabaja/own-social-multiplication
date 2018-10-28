@@ -30,12 +30,13 @@ public class MultiplicationResultAttempt {
 	private Long id; 
 	
 	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "USER_ID")
+	private final User user;
+	
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "MULTIPLICATION_ID")
 	private final Multiplication multiplication;
 	
-	@ManyToOne(cascade = CascadeType.PERSIST)
-	@JoinColumn(name = "USER_ID")
-	private final User user;
 	
 	@Column(name = "RESULT_ATTEMPT")
 	private final int resultAttempt;
