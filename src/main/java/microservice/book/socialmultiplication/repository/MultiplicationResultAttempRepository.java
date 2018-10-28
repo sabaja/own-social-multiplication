@@ -2,17 +2,17 @@ package microservice.book.socialmultiplication.repository;
 
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import microservice.book.socialmultiplication.domain.MultiplicationResultAttempt;
 
-public interface MultiplicationResultAttempRepository extends CrudRepository<MultiplicationResultAttempt, Long> {
+public interface MultiplicationResultAttempRepository extends JpaRepository<MultiplicationResultAttempt, Long> {
 
 	/**
 	 * 
 	 * @param userAlias
 	 * @return The 5 last multiplication result attempt by user alias
 	 */
-	public List<MultiplicationResultAttempt> findTop5ByUserAliasdOrderByUserIdDesc(String alias);
+	public List<MultiplicationResultAttempt> findTop5ByUserAliasOrderByUserIdDesc(String alias);
 
 }

@@ -11,11 +11,15 @@ import org.mockito.MockitoAnnotations;
 import microservice.book.socialmultiplication.domain.Multiplication;
 import microservice.book.socialmultiplication.domain.MultiplicationResultAttempt;
 import microservice.book.socialmultiplication.domain.User;
+import microservice.book.socialmultiplication.repository.MultiplicationResultAttempRepository;
 
 public class MultiplicationServiceImplTest {
 
 	private MultiplicationServiceImpl multiplicationServiceImpl;
 
+	@Mock
+	private MultiplicationResultAttempRepository multiplicationResultAttempRepository;
+	
 	@Mock
 	private RandomGeneratorService randomGeneratorService;
 
@@ -43,6 +47,19 @@ public class MultiplicationServiceImplTest {
 		assertThat(resultAttempt.getResultAttempt()).isEqualTo(1500);
 	}
 
+//	@Test
+//	public void createRandomMultiplicationTest() {
+//		// given (our mocked Random Generator service will return first 50, then 30)
+//		given(randomGeneratorService.generateRandomFactor()).willReturn(50, 30);
+//
+//		// when
+//		Multiplication multiplication = multiplicationServiceImpl.createRandomMultiplication();
+//
+//		// then
+//		assertThat(multiplication.getFactorA()).isEqualTo(50);
+//		assertThat(multiplication.getFactorB()).isEqualTo(30);
+//	}
+	
 	//Simuliamo un risultato corretto immesso da un utente
 	@Test
 	public void checkCorrectAttemptResult() {

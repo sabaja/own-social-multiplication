@@ -36,7 +36,7 @@ public final class Multiplication implements Serializable {
 	@Column(name = "FACTOR_A")
 	private final int factorA;
 
-	@Column(name = "FACTOR_A")
+	@Column(name = "FACTOR_B")
 	private final int factorB;
 
 	@Column(name = "RESULT")
