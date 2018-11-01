@@ -19,7 +19,7 @@ import microservices.book.multiplication.service.RandomGeneratorService;
 public class RandomGeneratorServiceTest {
 
 	@Autowired
-	RandomGeneratorService service;
+	private RandomGeneratorService service;
 
 	@Test
 	public void randomGeneratorServiceIsBetweenExpectedLimits() throws Exception {
