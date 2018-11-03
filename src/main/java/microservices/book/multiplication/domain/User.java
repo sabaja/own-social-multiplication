@@ -1,12 +1,9 @@
 package microservices.book.multiplication.domain;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -20,13 +17,8 @@ import lombok.ToString;
 @EqualsAndHashCode
 @ToString
 @Entity
-@Table(name="USER")
-public class User implements Serializable{
+public final class User {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1490401593315076434L;
 
 	@Id
 	@GeneratedValue
@@ -36,7 +28,8 @@ public class User implements Serializable{
 	@Column(name = "ALIAS", unique = true, nullable = false, length = 150)
 	private final String alias;
 
-	public User() {
-		this("");
-	}
+    // Empty constructor for JSON/JPA
+    protected User() {
+        alias = null;
+    }
 }

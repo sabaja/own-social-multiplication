@@ -1,7 +1,5 @@
 package microservices.book.multiplication.domain;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,16 +19,12 @@ import lombok.ToString;
 @RequiredArgsConstructor
 @Entity
 @Table(name="MULTIPLICATION")
-public final class Multiplication implements Serializable {
+public final class Multiplication{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6745854840753509812L;
 
 	@Id
 	@GeneratedValue
-	@Column(name = "MULTIPLICATION_ID", nullable = false, unique = true)
+	@Column(name = "MULTIPLICATION_ID")
 	private Long id;
 
 	@Column(name = "FACTOR_A")
@@ -44,11 +38,5 @@ public final class Multiplication implements Serializable {
 
 	public Multiplication() {
 		this(0, 0);
-		this.result = 0;
-	}
-
-	public int getResult() {
-		this.result = this.factorA * this.factorB;
-		return result;
 	}
 }

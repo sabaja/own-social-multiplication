@@ -1,14 +1,15 @@
 package microservices.book.multiplication.repository;
 
+import microservices.book.multiplication.domain.User;
+import org.springframework.data.repository.CrudRepository;
+
 import java.util.Optional;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+/**
+ * This interface allows us to save and retrieve Users
+ */
+public interface UserRepository extends CrudRepository<User, Long> {
 
-import microservices.book.multiplication.domain.User;
-
-public interface UserRepository extends JpaRepository<User, Long> {
-	
-	public Optional<User> findByAlias(final String alias);
-	
+    Optional<User> findByAlias(final String alias);
 
 }
