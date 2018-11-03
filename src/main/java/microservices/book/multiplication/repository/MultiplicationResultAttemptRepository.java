@@ -2,17 +2,14 @@ package microservices.book.multiplication.repository;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import microservices.book.multiplication.domain.MultiplicationResultAttempt;
 
-public interface MultiplicationResultAttemptRepository extends JpaRepository<MultiplicationResultAttempt, Long> {
+public interface MultiplicationResultAttemptRepository extends CrudRepository<MultiplicationResultAttempt, Long> {
 
-	/**
-	 * 
-	 * @param userAlias
-	 * @return The 5 last multiplication result attempt by user alias
-	 */
-	public List<MultiplicationResultAttempt> findTop5ByUserAliasOrderByIdDesc(String alias);
-
+    /**
+     * @return the latest 5 attempts for a given user, identified by their alias.
+     */
+    List<MultiplicationResultAttempt> findTop5ByUserAliasOrderByIdDesc(String userAlias);
 }

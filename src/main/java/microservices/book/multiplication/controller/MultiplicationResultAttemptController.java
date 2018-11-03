@@ -36,15 +36,15 @@ public class MultiplicationResultAttemptController {
 	 * https://stackoverflow.com/questions/33185217/is-it-possible-in-spring-mvc-4-return-boolean-as-json
 	 * 
 	 */
-	@RequiredArgsConstructor
-	@NoArgsConstructor(force = true)
-	@Getter
-	@EqualsAndHashCode
-	@ToString
-	public final class ResultResponse {
-		private final boolean check;
-		private final int result;
-	}
+//	@RequiredArgsConstructor
+//	@NoArgsConstructor(force = true)
+//	@Getter
+//	@EqualsAndHashCode
+//	@ToString
+//	public final class ResultResponse {
+//		private final boolean check;
+//		private final int result;
+//	}
 
 	@Autowired
 	public MultiplicationResultAttemptController(MultiplicationService multiplicationService) {

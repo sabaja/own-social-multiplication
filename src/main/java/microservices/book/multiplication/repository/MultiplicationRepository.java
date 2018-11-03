@@ -1,9 +1,10 @@
 package microservices.book.multiplication.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.repository.CrudRepository;
 import microservices.book.multiplication.domain.Multiplication;
 
-public interface MultiplicationRepository extends JpaRepository<Multiplication, Long>{
-
+/**
+ * This interface allows us to save and retrieve Multiplications
+ */
+public interface MultiplicationRepository extends CrudRepository<Multiplication, Long> {
 }

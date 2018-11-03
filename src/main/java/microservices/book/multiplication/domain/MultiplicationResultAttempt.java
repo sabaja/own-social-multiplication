@@ -21,12 +21,11 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @Entity
-@Table(name="MULTIPLICATION_RESULT_ATTEMPT")
-public class MultiplicationResultAttempt {
+public final class MultiplicationResultAttempt {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "ID", nullable = false, unique = true)
+	@Column(name = "ID")
 	private Long id; 
 	
 	@ManyToOne(cascade = CascadeType.PERSIST)
@@ -44,11 +43,10 @@ public class MultiplicationResultAttempt {
 	@Column(name = "IS_CORRECT")
 	private final boolean correct;
 
-	public MultiplicationResultAttempt() {
+	MultiplicationResultAttempt() {
 		this.multiplication = null;
 		this.user = null;
 		this.resultAttempt = -1;
 		this.correct = false;
 	}
-
 }
