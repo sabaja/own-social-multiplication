@@ -1,6 +1,3 @@
-/*
- * Quando il contenuto viene caricato, eseguiamo una chiamata API REST per ottenere una moltiplicazione casuale. 
- * Quindi mostriamo i fattori nei segnaposti che usano la classe per individuarli.*/
 function updateMultiplication() {
     $.ajax({
         url: "http://localhost:8080/multiplications/random"
@@ -13,10 +10,20 @@ function updateMultiplication() {
         $('.multiplication-b').empty().append(data.factorB);
     });
 }
-/*
- * Registriamo un listener per l'evento di invio nel nostro modulo per intercettarlo e impedirgli di eseguire l'operazione predefinita.
- * Otteniamo quindi i dati dal modulo, inviamo i dati all'API per verificare il tentativo risultante e quindi mostriamo agli utenti un messaggio amichevole con il risultato.
- * */
+
+function updateStats(alias) {
+    $.ajax({
+        url: "http://localhost:8080/results?alias=" + alias,
+    }).then(function(data) {
+        $('#stats-body').empty();
+        data.forEach(function(row) {
+            $('#stats-body').append('<tr><td>' + row.id + '</td>' +
+                '<td>' + row.multiplication.factorA + ' x ' + row.multiplication.factorB + '</td>' +
+                '<td>' + row.resultAttempt + '</td>' +
+                '<td>' + (row.correct === true ? 'YES' : 'NO') + '</td></tr>');
+        });
+    });
+}
 
 $(document).ready(function() {
 
@@ -44,7 +51,6 @@ $(document).ready(function() {
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            //per disattivare async
             async: false,
             success: function(result){
                 if(result.correct) {
@@ -56,5 +62,7 @@ $(document).ready(function() {
         });
 
         updateMultiplication();
+
+        updateStats(userAlias);
     });
 });
