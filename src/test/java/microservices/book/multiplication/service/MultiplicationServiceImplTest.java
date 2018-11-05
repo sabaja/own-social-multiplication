@@ -81,8 +81,9 @@ public class MultiplicationServiceImplTest {
 		Multiplication multiplication = new Multiplication(50, 60);
 		User user = new User("john_doe");
 		MultiplicationResultAttempt attempt = new MultiplicationResultAttempt(user, multiplication, 3010, false);
-		MultiplicationResultAttempt verifiedAttempt = new MultiplicationResultAttempt(user, multiplication, 3010, false);
-		
+		MultiplicationResultAttempt verifiedAttempt = new MultiplicationResultAttempt(user, multiplication, 3010,
+				false);
+
 		given(userRepository.findByAlias("john_doe")).willReturn(Optional.empty());
 
 		// when
@@ -109,5 +110,17 @@ public class MultiplicationServiceImplTest {
 
 		// then
 		assertThat(latestAttemptsResult).isEqualTo(latestAttempts);
+	}
+
+	@Test
+	public void checkUniqueMultiplicationBeforePersist() {
+		Multiplication multiplication1 = new Multiplication(50, 60);
+		User user = new User("john_doe");
+		MultiplicationResultAttempt attempt_1 = new MultiplicationResultAttempt(user, multiplication1, 3000, false);
+//		given(attemptRepository.findById(attempt_1.getId())). 
+		// @formatter:on
+
+//		Multiplication multiplication2 = new Multiplication(50, 60);
+
 	}
 }
