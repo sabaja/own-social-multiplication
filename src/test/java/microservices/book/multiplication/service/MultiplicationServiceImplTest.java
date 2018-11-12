@@ -110,8 +110,6 @@ public class MultiplicationServiceImplTest {
 		// then
 		assertThat(latestAttemptsResult).isEqualTo(latestAttempts);
 	}
-<<<<<<< HEAD
-=======
 
 //	@Test
 	public void checkUniqueMultiplicationBeforePersist() {
@@ -124,5 +122,4 @@ public class MultiplicationServiceImplTest {
 //		Multiplication multiplication2 = new Multiplication(50, 60);
 
 	}
->>>>>>> 00fe1e8... Add RabbitMQ and RabbitMQConfiguration.java
 }
