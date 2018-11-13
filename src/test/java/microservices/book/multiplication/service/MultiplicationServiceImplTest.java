@@ -112,7 +112,8 @@ public class MultiplicationServiceImplTest {
 		assertThat(latestAttemptsResult).isEqualTo(latestAttempts);
 	}
 
-	@Test
+
+//	@Test
 	public void checkUniqueMultiplicationBeforePersist() {
 		Multiplication multiplication1 = new Multiplication(50, 60);
 		User user = new User("john_doe");
