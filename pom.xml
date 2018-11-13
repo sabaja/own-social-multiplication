@@ -6,7 +6,7 @@
 
 	<groupId>microservice.book</groupId>
 	<artifactId>own-social-multiplication</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>own-social-multiplication</name>
