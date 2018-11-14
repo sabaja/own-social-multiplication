@@ -35,7 +35,6 @@ public final class MultiplicationResultAttempt {
 	@JoinColumn(name = "MULTIPLICATION_ID")
 	private final Multiplication multiplication;
 	
-	
 	@Column(name = "RESULT_ATTEMPT")
 	private final int resultAttempt;
 	
