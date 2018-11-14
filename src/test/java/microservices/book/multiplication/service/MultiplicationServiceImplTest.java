@@ -1,6 +1,7 @@
 package microservices.book.multiplication.service;
 
 import microservices.book.event.EventDispatcher;
+import microservices.book.event.MultiplicationSolvedEvent;
 import microservices.book.multiplication.domain.Multiplication;
 import microservices.book.multiplication.domain.MultiplicationResultAttempt;
 import microservices.book.multiplication.domain.User;
@@ -18,6 +19,7 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
+import static org.mockito.ArgumentMatchers.eq;
 
 public class MultiplicationServiceImplTest {
 
@@ -31,8 +33,8 @@ public class MultiplicationServiceImplTest {
 
 	@Mock
 	private UserRepository userRepository;
-	
-	@Mock 
+
+	@Mock
 	private EventDispatcher eventDispatcher;
 
 	@Before
@@ -74,9 +76,14 @@ public class MultiplicationServiceImplTest {
 		// when
 		boolean attemptResult = multiplicationServiceImpl.checkAttempt(attempt);
 
+		// Simulazione Event: MultiplicationSolvedEvent
+		MultiplicationSolvedEvent event = new MultiplicationSolvedEvent(verifiedAttempt.getId(),
+				verifiedAttempt.getUser().getId(), verifiedAttempt.isCorrect());
+
 		// then
 		assertThat(attemptResult).isTrue();
 		verify(attemptRepository).save(verifiedAttempt);
+		verify(eventDispatcher).send(eq(event));
 	}
 
 	@Test
@@ -93,9 +100,14 @@ public class MultiplicationServiceImplTest {
 		// when
 		boolean attemptResult = multiplicationServiceImpl.checkAttempt(attempt);
 
+		// Simulazione Event: MultiplicationSolvedEvent
+				MultiplicationSolvedEvent event = new MultiplicationSolvedEvent(verifiedAttempt.getId(),
+						verifiedAttempt.getUser().getId(), verifiedAttempt.isCorrect());
+				
 		// then
 		assertThat(attemptResult).isFalse();
 		verify(attemptRepository).save(verifiedAttempt);
+		verify(eventDispatcher).send(eq(event));
 	}
 
 	@Test
@@ -116,16 +128,15 @@ public class MultiplicationServiceImplTest {
 		assertThat(latestAttemptsResult).isEqualTo(latestAttempts);
 	}
 
-
-//	@Test
+	// @Test
 	public void checkUniqueMultiplicationBeforePersist() {
 		Multiplication multiplication1 = new Multiplication(50, 60);
 		User user = new User("john_doe");
 		MultiplicationResultAttempt attempt_1 = new MultiplicationResultAttempt(user, multiplication1, 3000, false);
-//		given(attemptRepository.findById(attempt_1.getId())). 
+		// given(attemptRepository.findById(attempt_1.getId())).
 		// @formatter:on
 
-//		Multiplication multiplication2 = new Multiplication(50, 60);
+		// Multiplication multiplication2 = new Multiplication(50, 60);
 
 	}
 }
