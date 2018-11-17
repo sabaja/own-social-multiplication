@@ -28,7 +28,7 @@ public class RabbitMQConfiguration {
 	}
 
 	@Bean
-	private MessageConverter producerJackson2MessageConverter() {
+	public MessageConverter producerJackson2MessageConverter() {
 		return new Jackson2JsonMessageConverter();
 	}
 	
