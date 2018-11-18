@@ -8,6 +8,7 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
  * Configures RabbitMQ to use events in our application.
@@ -30,6 +31,14 @@ public class RabbitMQConfiguration {
 	@Bean
 	public MessageConverter producerJackson2MessageConverter() {
 		return new Jackson2JsonMessageConverter();
+	}
+	
+	/** https://stackoverflow.com/questions/48158249/spring-boot-could-not-resolve-placeholder-in-string */
+	@Bean
+	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+	    PropertySourcesPlaceholderConfigurer c = new PropertySourcesPlaceholderConfigurer();
+	    c.setIgnoreUnresolvablePlaceholders(true);
+	    return c;
 	}
 	
 }
