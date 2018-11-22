@@ -132,6 +132,7 @@ public class MultiplicationServiceImplTest {
 	public void checkUniqueMultiplicationBeforePersist() {
 		Multiplication multiplication1 = new Multiplication(50, 60);
 		User user = new User("john_doe");
+		@SuppressWarnings("unused")
 		MultiplicationResultAttempt attempt_1 = new MultiplicationResultAttempt(user, multiplication1, 3000, false);
 		// given(attemptRepository.findById(attempt_1.getId())).
 		// @formatter:on
