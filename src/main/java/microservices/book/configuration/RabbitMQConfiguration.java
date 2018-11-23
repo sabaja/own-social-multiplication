@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitMQConfiguration {
 
 	/**
-	 * To build a Topic Exchange
+	 * To build a Topic Exchange 11111111
 	 * @param exchangeName
 	 * @return
 	 */
