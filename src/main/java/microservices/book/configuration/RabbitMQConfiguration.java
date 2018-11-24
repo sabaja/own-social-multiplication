@@ -15,11 +15,22 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfiguration {
 
+	/**
+	 * To build a Topic Exchange 11111111
+	 * @param exchangeName
+	 * @return
+	 */
 	@Bean
 	public TopicExchange multiplicationExchange(@Value("${multiplication.exchange}") final String exchangeName) {
 		return new TopicExchange(exchangeName);
 	}
 
+	/**
+	 * Helper class for sending and receiving messages
+	 * 
+	 * @param connectionFactory
+	 * @return
+	 */
 	@Bean
 	public RabbitTemplate rabbitTemplate(final ConnectionFactory connectionFactory) {
 		final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
