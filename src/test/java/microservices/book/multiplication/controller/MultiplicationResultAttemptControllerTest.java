@@ -98,6 +98,7 @@ public class MultiplicationResultAttemptControllerTest {
 
 	@Test
 	public void getResultById() throws Exception {
+		
 		// given
 		User user = new User("john_doe");
 		Multiplication multiplication = new Multiplication(50, 70);
