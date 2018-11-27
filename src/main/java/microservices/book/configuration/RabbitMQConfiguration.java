@@ -6,8 +6,10 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 
 /**
  * Configures RabbitMQ to use events in our application.
@@ -17,6 +19,7 @@ public class RabbitMQConfiguration {
 
 	/**
 	 * To build a Topic Exchange 11111111
+	 * 
 	 * @param exchangeName
 	 * @return
 	 */
@@ -43,6 +46,13 @@ public class RabbitMQConfiguration {
 		return new Jackson2JsonMessageConverter();
 	}
 
+	@Bean
+	public PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
+		PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
+		propertyPlaceholderConfigurer.setLocations(new ClassPathResource("application.properties"));
+		propertyPlaceholderConfigurer.setIgnoreUnresolvablePlaceholders(false);
+		return propertyPlaceholderConfigurer;
+	}
 	/**
 	 * per bloccare errore property
 	 * https://stackoverflow.com/questions/48158249/spring-boot-could-not-resolve-placeholder-in-string
