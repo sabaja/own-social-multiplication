@@ -1,4 +1,4 @@
-package microservices.book.configuration;
+package microservices.book.multiplication.configuration;
 
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -47,7 +47,7 @@ public class RabbitMQConfiguration {
 	}
 
 	@Bean
-	public PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
+	public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
 		PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
 		propertyPlaceholderConfigurer.setLocations(new ClassPathResource("application.properties"));
 		propertyPlaceholderConfigurer.setIgnoreUnresolvablePlaceholders(false);
