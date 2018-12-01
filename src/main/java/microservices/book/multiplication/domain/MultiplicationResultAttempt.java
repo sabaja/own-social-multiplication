@@ -19,7 +19,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @EqualsAndHashCode
-@Entity
+@Entity(name = "MULTIPLICATION_RESULT_ATTEMPT")
 public final class MultiplicationResultAttempt {
 
 	@Id
