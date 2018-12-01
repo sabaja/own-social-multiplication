@@ -46,13 +46,13 @@ public class RabbitMQConfiguration {
 		return new Jackson2JsonMessageConverter();
 	}
 
-	@Bean
-	public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
-		PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
-		propertyPlaceholderConfigurer.setLocations(new ClassPathResource("application.properties"));
-		propertyPlaceholderConfigurer.setIgnoreUnresolvablePlaceholders(false);
-		return propertyPlaceholderConfigurer;
-	}
+//	@Bean
+//	public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
+//		PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
+//		propertyPlaceholderConfigurer.setLocations(new ClassPathResource("application.properties"));
+//		propertyPlaceholderConfigurer.setIgnoreUnresolvablePlaceholders(false);
+//		return propertyPlaceholderConfigurer;
+//	}
 	/**
 	 * per bloccare errore property
 	 * https://stackoverflow.com/questions/48158249/spring-boot-could-not-resolve-placeholder-in-string
