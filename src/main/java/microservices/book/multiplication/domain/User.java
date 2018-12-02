@@ -16,20 +16,19 @@ import lombok.ToString;
 @Setter
 @EqualsAndHashCode
 @ToString
-@Entity
+@Entity(name = "USER")
 public final class User {
-
 
 	@Id
 	@GeneratedValue
 	@Column(name = "USER_ID", nullable = false, unique = true)
-	private Long id; 
-	
+	private Long id;
+
 	@Column(name = "ALIAS", unique = true, nullable = false, length = 150)
 	private final String alias;
 
-    // Empty constructor for JSON/JPA
-    protected User() {
-        alias = null;
-    }
+	// Empty constructor for JSON/JPA
+	protected User() {
+		alias = null;
+	}
 }
