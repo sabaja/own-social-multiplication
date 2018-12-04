@@ -7,7 +7,7 @@
 /.springBeans
 !.mvn/wrapper/maven-wrapper.jar
 **/logs
-**/Database_Repository
+**/Database_Repository/
 
 ### STS ###
 .apt_generated
