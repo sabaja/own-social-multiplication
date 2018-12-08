@@ -17,15 +17,14 @@ public class EventDispatcher {
 
 	@Autowired
 	public EventDispatcher(final RabbitTemplate rabbitTemplate
-//			,
-//			@Value("${multiplication.exchange}") String multiplicationExchange,
-//			@Value("${multiplication.solved}") String multiplicationSolvedRoutingKey
+			,
+			@Value("${multiplication.exchange}") String multiplicationExchange,
+			@Value("${multiplication.solved.key}") String multiplicationSolvedRoutingKey
 			) {
 		super();
 		this.rabbitTemplate = rabbitTemplate;
-//		this.multiplicationExchange = multiplicationExchange;
-		this.multiplicationExchange = "multiplication.exchange";
-		this.multiplicationSolvedRoutingKey = "multiplication.solved";
+		this.multiplicationExchange = multiplicationExchange;
+		this.multiplicationSolvedRoutingKey = multiplicationSolvedRoutingKey;
 	}
 
 	public void send(final MultiplicationSolvedEvent multiplicationSolvedEvent) {
