@@ -16,7 +16,7 @@ public class EventDispatcher {
 	private String multiplicationSolvedRoutingKey;
 
 	@Autowired
-	EventDispatcher(final RabbitTemplate rabbitTemplate
+	public EventDispatcher(final RabbitTemplate rabbitTemplate
 //			,
 //			@Value("${multiplication.exchange}") String multiplicationExchange,
 //			@Value("${multiplication.solved}") String multiplicationSolvedRoutingKey
