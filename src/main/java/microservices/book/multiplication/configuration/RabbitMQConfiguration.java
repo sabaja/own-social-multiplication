@@ -1,15 +1,15 @@
 package microservices.book.multiplication.configuration;
 
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
-import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
 
 /**
  * Configures RabbitMQ to use events in our application.
@@ -28,6 +28,17 @@ public class RabbitMQConfiguration {
 		return new TopicExchange(exchangeName);
 	}
 
+	@Bean
+	public Queue queue() {
+		return new Queue("#{multiplication.queue}");
+	}
+	
+	
+	@Bean
+	public Binding binding(final Queue queue, final TopicExchange exchange,
+			@Value("${multiplication.solved.key}") final String routingKey) {
+		return BindingBuilder.bind(queue).to(exchange).with(routingKey);
+	}
 	/**
 	 * Helper class for sending and receiving messages
 	 * 
@@ -37,12 +48,20 @@ public class RabbitMQConfiguration {
 	@Bean
 	public RabbitTemplate rabbitTemplate(final ConnectionFactory connectionFactory) {
 		final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-		rabbitTemplate.setMessageConverter(producerJackson2MessageConverter());
+		rabbitTemplate.setMessageConverter(jackson2JsonMessageConverter());
 		return rabbitTemplate;
 	}
 
+//	@Bean
+//	public MessageConverter producerJackson2MessageConverter() {
+//		return new Jackson2JsonMessageConverter();
+//	}
+	
+	/**
+	 * https://thepracticaldeveloper.com/2016/10/23/produce-and-consume-json-messages-with-spring-boot-amqp/
+	 */
 	@Bean
-	public MessageConverter producerJackson2MessageConverter() {
+	public Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
 		return new Jackson2JsonMessageConverter();
 	}
 
