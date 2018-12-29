@@ -28,17 +28,6 @@ public class RabbitMQConfiguration {
 		return new TopicExchange(exchangeName);
 	}
 
-	@Bean
-	public Queue queue() {
-		return new Queue("#{multiplication.queue}");
-	}
-	
-	
-	@Bean
-	public Binding binding(final Queue queue, final TopicExchange exchange,
-			@Value("${multiplication.solved.key}") final String routingKey) {
-		return BindingBuilder.bind(queue).to(exchange).with(routingKey);
-	}
 	/**
 	 * Helper class for sending and receiving messages
 	 * 
@@ -52,11 +41,6 @@ public class RabbitMQConfiguration {
 		return rabbitTemplate;
 	}
 
-//	@Bean
-//	public MessageConverter producerJackson2MessageConverter() {
-//		return new Jackson2JsonMessageConverter();
-//	}
-	
 	/**
 	 * https://thepracticaldeveloper.com/2016/10/23/produce-and-consume-json-messages-with-spring-boot-amqp/
 	 */
@@ -64,23 +48,5 @@ public class RabbitMQConfiguration {
 	public Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
 		return new Jackson2JsonMessageConverter();
 	}
-
-//	@Bean
-//	public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
-//		PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
-//		propertyPlaceholderConfigurer.setLocations(new ClassPathResource("application.properties"));
-//		propertyPlaceholderConfigurer.setIgnoreUnresolvablePlaceholders(false);
-//		return propertyPlaceholderConfigurer;
-//	}
-	/**
-	 * per bloccare errore property
-	 * https://stackoverflow.com/questions/48158249/spring-boot-could-not-resolve-placeholder-in-string
-	 */
-//	@Bean
-//	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-//		PropertySourcesPlaceholderConfigurer c = new PropertySourcesPlaceholderConfigurer();
-//		c.setIgnoreUnresolvablePlaceholders(true);
-//		return c;
-//	}
 
 }
