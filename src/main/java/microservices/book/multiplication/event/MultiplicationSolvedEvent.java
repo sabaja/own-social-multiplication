@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 /**
- * Event that models the fact that a {@link microservices.book.multiplication.domain.Multiplication}
+ * Event that models the fact that a {@link Multiplication}
  * has been solved in the system. Provides some context information about the multiplication.
  */
 @RequiredArgsConstructor

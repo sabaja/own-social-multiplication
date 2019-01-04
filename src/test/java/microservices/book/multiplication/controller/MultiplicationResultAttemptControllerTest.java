@@ -98,17 +98,17 @@ public class MultiplicationResultAttemptControllerTest {
 
 	@Test
 	public void getResultById() throws Exception {
-		
+
 		// given
 		User user = new User("john_doe");
 		Multiplication multiplication = new Multiplication(50, 70);
 		MultiplicationResultAttempt attempt = new MultiplicationResultAttempt(user, multiplication, 3500, true);
 		given(multiplicationService.getResultById(1L)).willReturn(attempt);
 
-		//when
+		// when
 		MockHttpServletResponse response = mvc.perform(get("/results/1")).andReturn().getResponse();
 
-		//then
+		// then
 		assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
 		assertThat(response.getContentAsString()).isEqualTo(jsonResultAttempt.write(attempt).getJson());
 

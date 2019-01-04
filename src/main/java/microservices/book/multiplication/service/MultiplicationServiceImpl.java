@@ -40,6 +40,14 @@ class MultiplicationServiceImpl implements MultiplicationService {
 		return new Multiplication(factorA, factorB);
 	}
 
+	/**
+	 * It’s important to point out that Spring AMQP supports transactions. Since we
+	 * have our method annotated with @Transactional , the event will not be sent in
+	 * case of an exception even if we placed our eventDispatcher.send() at the
+	 * beginning of the method and the exception happened afterward. For better
+	 * readability, place the event senders at the end of the logic, or at least
+	 * after the action happens
+	 */
 	@Transactional
 	@Override
 	public boolean checkAttempt(final MultiplicationResultAttempt attempt) {
