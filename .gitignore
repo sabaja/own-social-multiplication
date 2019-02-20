@@ -5,6 +5,7 @@
 /.settings
 /.factorypath
 /.springBeans
+/Database_Repository/
 !.mvn/wrapper/maven-wrapper.jar
 **/logs
 **/Database_Repository/
