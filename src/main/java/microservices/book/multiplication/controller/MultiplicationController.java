@@ -29,8 +29,8 @@ public class MultiplicationController {
 
 	@GetMapping("/random")
 	public Multiplication getRandomMultiplication() {
-		logger.debug("Server port: {} | controller result: {}", this.serverPort,
-				service.createRandomMultiplication().getResult());
+		logger.info("Server port: {} | controller random multiplication: [{}*{}]", this.serverPort,
+				service.createRandomMultiplication().getFactorA(), service.createRandomMultiplication().getFactorB());
 		return service.createRandomMultiplication();
 	}
 }
