@@ -5,10 +5,10 @@
 /.settings
 /.factorypath
 /.springBeans
-/Database_Repository/
+/Database_Repository/*
 !.mvn/wrapper/maven-wrapper.jar
 **/logs
-**/Database_Repository/
+
 
 ### STS ###
 .apt_generated
