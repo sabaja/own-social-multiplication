@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import microservices.book.multiplication.domain.Multiplication;
 import microservices.book.multiplication.service.MultiplicationService;
 
@@ -27,10 +29,17 @@ public class MultiplicationController {
 		this.serverPort = serverPort;
 	}
 
+	
 	@GetMapping("/random")
+	@HystrixCommand(fallbackMethod = "defaultRandomMultiplaction")
 	public Multiplication getRandomMultiplication() {
 		logger.info("Server port: {} | controller random multiplication: [{}*{}]", this.serverPort,
 				service.createRandomMultiplication().getFactorA(), service.createRandomMultiplication().getFactorB());
 		return service.createRandomMultiplication();
+	}
+	
+	public Multiplication defaultRandomMultiplaction() {
+		logger.info("Server port: {} | Fallback error: [{}*{}]", this.serverPort, 1,1);
+		return new Multiplication();
 	}
 }
