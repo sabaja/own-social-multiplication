@@ -1,4 +1,4 @@
-package microservices.book.multiplication.controller;
+package microservices.book.multiplication.multiplication.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

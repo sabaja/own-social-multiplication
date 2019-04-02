@@ -1,10 +1,10 @@
-package microservices.book.multiplication.repository;
+package microservices.book.multiplication.multiplication.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import microservices.book.multiplication.domain.MultiplicationResultAttempt;
+import microservices.book.multiplication.multiplication.domain.MultiplicationResultAttempt;
 
 public interface MultiplicationResultAttemptRepository extends JpaRepository<MultiplicationResultAttempt, Long> {
 

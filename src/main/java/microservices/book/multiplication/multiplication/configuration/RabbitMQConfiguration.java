@@ -1,4 +1,4 @@
-package microservices.book.multiplication.configuration;
+package microservices.book.multiplication.multiplication.configuration;
 
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

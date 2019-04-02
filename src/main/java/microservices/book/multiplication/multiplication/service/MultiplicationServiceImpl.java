@@ -1,15 +1,16 @@
-package microservices.book.multiplication.service;
+package microservices.book.multiplication.multiplication.service;
 
-import microservices.book.multiplication.domain.Multiplication;
-import microservices.book.multiplication.domain.MultiplicationResultAttempt;
-import microservices.book.multiplication.domain.User;
-import microservices.book.multiplication.event.EventDispatcher;
-import microservices.book.multiplication.event.MultiplicationSolvedEvent;
-import microservices.book.multiplication.repository.MultiplicationResultAttemptRepository;
-import microservices.book.multiplication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
+
+import microservices.book.multiplication.multiplication.domain.Multiplication;
+import microservices.book.multiplication.multiplication.domain.MultiplicationResultAttempt;
+import microservices.book.multiplication.multiplication.domain.User;
+import microservices.book.multiplication.multiplication.event.EventDispatcher;
+import microservices.book.multiplication.multiplication.event.MultiplicationSolvedEvent;
+import microservices.book.multiplication.multiplication.repository.MultiplicationResultAttemptRepository;
+import microservices.book.multiplication.multiplication.repository.UserRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;

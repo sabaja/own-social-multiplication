@@ -94,7 +94,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,7 +181,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -294,7 +294,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -381,7 +381,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -494,7 +494,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 95 more
@@ -573,7 +573,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 69 more
@@ -678,7 +678,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 95 more
@@ -757,7 +757,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 69 more
@@ -862,7 +862,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 95 more
@@ -941,7 +941,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:13)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 69 more
@@ -1046,7 +1046,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 95 more
@@ -1125,7 +1125,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 69 more
@@ -1230,7 +1230,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 95 more
@@ -1309,7 +1309,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at microservices.book.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
+	at microservices.book.multiplication.SocialMultiplicationApplication.main(SocialMultiplicationApplication.java:16)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/sabaja/Scrivania/workspaces/STS/STS-Back-up/STS-workspace-Microservice-Spring/own-social-multiplication/Database_Repository/social-multiplication.mv.db [1.4.197/7]" [50000-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 69 more

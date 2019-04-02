@@ -1,4 +1,4 @@
-package microservices.book.multiplication.controller;
+package microservices.book.multiplication.multiplication.controller;
 
 import java.lang.invoke.MethodHandles;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
-import microservices.book.multiplication.domain.Multiplication;
-import microservices.book.multiplication.service.MultiplicationService;
+import microservices.book.multiplication.multiplication.domain.Multiplication;
+import microservices.book.multiplication.multiplication.service.MultiplicationService;
 
 @RestController
 @RequestMapping(value = "/multiplications")

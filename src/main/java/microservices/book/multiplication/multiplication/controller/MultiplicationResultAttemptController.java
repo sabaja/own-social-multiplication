@@ -1,4 +1,4 @@
-package microservices.book.multiplication.controller;
+package microservices.book.multiplication.multiplication.controller;
 
 import java.lang.invoke.MethodHandles;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import microservices.book.multiplication.domain.MultiplicationResultAttempt;
-import microservices.book.multiplication.service.MultiplicationService;
+import microservices.book.multiplication.multiplication.domain.MultiplicationResultAttempt;
+import microservices.book.multiplication.multiplication.service.MultiplicationService;
 
 @RestController
 @RequestMapping("/results")

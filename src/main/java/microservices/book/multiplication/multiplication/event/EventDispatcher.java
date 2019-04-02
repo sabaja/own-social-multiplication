@@ -1,4 +1,4 @@
-package microservices.book.multiplication.event;
+package microservices.book.multiplication.multiplication.event;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

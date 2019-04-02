@@ -1,4 +1,4 @@
-package microservices.book.multiplication.domain;
+package microservices.book.multiplication.multiplication.domain;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

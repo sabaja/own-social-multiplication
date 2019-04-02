@@ -1,4 +1,4 @@
-package microservices.book;
+package microservices.book.multiplication;
 
 import java.io.IOException;
 

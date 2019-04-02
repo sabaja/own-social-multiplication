@@ -1,7 +1,8 @@
-package microservices.book.multiplication.repository;
+package microservices.book.multiplication.multiplication.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import microservices.book.multiplication.domain.Multiplication;
+
+import microservices.book.multiplication.multiplication.domain.Multiplication;
 
 /**
  * This interface allows us to save and retrieve Multiplications
