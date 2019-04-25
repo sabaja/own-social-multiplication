@@ -40,6 +40,6 @@ public class MultiplicationController {
 	
 	public Multiplication defaultRandomMultiplaction() {
 		logger.info("Server port: {} | Fallback error: [{}*{}]", this.serverPort, 1,1);
-		return new Multiplication();
+		return new Multiplication(1,1);
 	}
 }
